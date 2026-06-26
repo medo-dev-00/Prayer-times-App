@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="variables.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>أوقات الصلاة</title>
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo">Noor</div>
+          <div class="brand-label">أوقات الصلاة</div>
+        </div>
+        <nav>
+          <a href="#overview" class="nav-link active">الرئيسية</a>
+          <a href="#prayers" class="nav-link">مواعيد الصلاة</a>
+          <a href="#about" class="nav-link">عن التطبيق</a>
+        </nav>
+        <div class="actions">
+          <button class="icon-btn" aria-label="تبديل الوضع">
+            <img src="./icons/moon-solid-full.svg" alt="وضع الليل" />
+          </button>
+          <button class="icon-btn" aria-label="تبديل اللغة">
+            <img src="./icons/globe-solid-full.svg" alt="تبديل اللغة" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="overview" class="hero">
+        <div class="container hero-grid">
+          <section class="panel">
+            <div class="hero-meta">
+              <p class="eyebrow" id="city-label">القاهرة، مصر</p>
+              <h1 id="hero-title">
+                حان الآن موعد صلاة <span id="hero-prayer">العصر</span>
+              </h1>
+              <p class="date-label" id="current-date">
+                الجمعة، ١٤ ربيع الثاني ١٤٤٦هـ
+              </p>
+              <label for="cities" class="city-select-label">اختر المدينة</label>
+              <select id="cities" class="city-select"></select>
+            </div>
+            <div class="clock-panel">
+              <div class="clock-meta">
+                <p class="eyebrow">الوقت الحالي</p>
+                <span>توقيت القاهرة</span>
+              </div>
+              <div id="current-time" class="digital-clock">21:07:52</div>
+            </div>
+          </section>
+          <aside class="next-prayer-card">
+            <section class="panel">
+              <p class="section-title">الصلاة القادمة</p>
+              <h2 id="next-prayer-name">المغرب</h2>
+              <div class="prayer-spot">
+                <div>
+                  <p class="label">باقي على الأذان</p>
+                  <p id="next-prayer-countdown" class="time">01:17:00</p>
+                </div>
+                <div>
+                  <p class="label">موعد الصلاة</p>
+                  <p id="next-prayer-time" class="time">18:50</p>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-row">
+                  <span>بدء اليوم</span>
+                  <span id="progress-label">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" id="progress-fill"></div>
+                </div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </section>
+      <section id="prayers" class="prayer-list">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">جدول اليوم</p>
+            <h2>مواعيد الصلاة</h2>
+          </div>
+          <div id="prayer-cards" class="prayer-grid">
+            <div class="prayer-card" data-time="">
+              <h3 class="prayer-name">صلاة الفجر</h3>
+              <p class="prayer-time">4:00</p>
+              <p class="prayer-note">الصلاة القادمة</p>
+            </div>
+            <div class="prayer-card" data-time="">
+              <h3 class="prayer-name">صلاة الفجر</h3>
+              <p class="prayer-time">4:00</p>
+              <p class="prayer-note">الصلاة القادمة</p>
+            </div>
+            <div class="prayer-card active" data-time="">
+              <h3 class="prayer-name">صلاة الفجر</h3>
+              <p class="prayer-time">4:00</p>
+              <p class="prayer-note">الصلاة القادمة</p>
+            </div>
+            <div class="prayer-card" data-time="">
+              <h3 class="prayer-name">صلاة الفجر</h3>
+              <p class="prayer-time">4:00</p>
+              <p class="prayer-note">الصلاة القادمة</p>
+            </div>
+            <div class="prayer-card" data-time="">
+              <h3 class="prayer-name">صلاة الفجر</h3>
+              <p class="prayer-time">4:00</p>
+              <p class="prayer-note">الصلاة القادمة</p>
+            </div>
+            <div class="prayer-card" data-time="">
+              <h3 class="prayer-name">صلاة الفجر</h3>
+              <p class="prayer-time">4:00</p>
+              <p class="prayer-note">الصلاة القادمة</p>
+            </div>
+          </div>
+          <div class="footer-note">
+            هذه المواعيد مستندة إلى حسابات توقيت مكة المكرمة ويمكن تحديثها
+            تلقائياً حسب المدينة.
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
