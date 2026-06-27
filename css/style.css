@@ -333,9 +333,6 @@ main {
   background: rgba(16, 185, 129, 0.08);
 }
 
-.prayer-card.active .prayer-note {
-  visibility: visible;
-}
 .prayer-card .prayer-name {
   margin: 0 0 0.75rem;
   font-weight: 700;
@@ -352,7 +349,6 @@ main {
   margin: 0.75rem 0 0;
   color: var(--color-on-surface-variant);
   font-size: 0.95rem;
-  visibility: hidden;
 }
 
 .footer-note {
